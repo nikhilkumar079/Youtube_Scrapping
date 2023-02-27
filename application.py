@@ -30,10 +30,6 @@ def index():
             links = []
             for i in range(5):
                 links.append('https://www.youtube.com' + d[i]['href'])
-            titles =[]
-            views =[]    
-            date =[]
-            thumb =[]
             reviews = []
             def details(l):
                 for i in l:
