@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Details of First Five Videos</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header" style="font-size: 50px; text-align: center;">Details</div>
+    
+
+   <table cellspacing="0">
+      <tr>
+         <th>Title</th>
+         <th width="300">Url</th>
+         <th width="180">Date Posted</th>
+         <th width="100">Views</th>
+         <th >Thumbnail Url</th>
+      </tr>
+         {% for review in reviews %}
+      <tr>
+          <td>{{review['Title']}}</td>
+         <td>{{review['Url']}}</td>
+         <td>{{review['Date Posted']}}</td>
+         <td>{{review['Views']}}</td>
+         <td>{{review['Thumbnail Url']}} </td>
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
